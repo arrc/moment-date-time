@@ -1,0 +1,2 @@
+{"headers":{"host":"localhost:3000","user-agent":"curl/7.51.0","accept":"*/*"},"user":"Naveen","level":"info","message":"Root path","timestamp":"2017-02-28T14:33:08.577Z"}
+{"res":{"statusCode":200},"req":{"url":"/","query":{},"headers":{"host":"localhost:3000","user-agent":"curl/7.51.0","accept":"*/*"},"method":"GET"},"responseTime":2,"user":"Naveen","role":"Naveen","level":"info","message":"\u001b[32m200\u001b[39m GET 2ms /","timestamp":"2017-02-28T14:33:08.582Z"}
