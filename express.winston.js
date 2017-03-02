@@ -17,11 +17,13 @@ module.exports = function(app) {
         })
       ],
       meta: true,
-      msg: "{{res.statusCode}} {{req.method}} {{res.responseTime}}ms {{req.url}}",
+      // msg: "{{res.statusCode}} {{req.method}} {{res.responseTime}}ms {{req.url}}",
+      expressFormat: true,
       dumpException: true,
       showStack: true,
       dynamicMeta: function(req, res) {
         return {
+          shortid: req.shortid,
           user: req.user ? req.user : null,
           role: req.user ? req.user : null,
         }

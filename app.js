@@ -22,15 +22,20 @@ app.use(expressWinston.errorLogger({
 //
 log = require('./log.winston')
 app.get('/', function(req, res){
+  var shortid = require('shortid');
+  req.shortid = shortid.generate()
   req.user = "Naveen"
-  log.info('Root path', {headers: req.headers, user: req.user})
+  log.info('Root path', {shortid: req.shortid, headers: req.headers, user: req.user})
   // throw new Error("fsadfs fsafsafa")
   res.status(200).json({msg: "Hi"})
 })
 
 app.post('/new', function(req, res){
-  log.info(req.body);
+  log.info('started new response.');
+  log.info('processing some data')
+  log.info('done processing some data', {'reqBody': req.body, 'req.body': 'Some body here', 'status': 'cool bitch'})
   res.status(200).json({body: req.body, msg: "success!"})
+  log.error("Response sent.")
 })
 
 app.post('/date', function(req, res){
